@@ -113,17 +113,19 @@
                     </view>
                     <connections>
                         <outlet property="heightLabel" destination="khb-yp-ZSG" id="BQ6-WK-BT7"/>
+                        <outlet property="heightSlider" destination="WVH-KG-1kq" id="rZh-va-4Bs"/>
                         <outlet property="weightLabel" destination="zec-vl-sbv" id="7ef-IM-MBj"/>
+                        <outlet property="weightSlider" destination="prr-w3-vDx" id="JYA-Aj-Ptl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="acO-Qz-oU1">
             <objects>
-                <viewController id="rTb-jE-lxL" sceneMemberID="viewController">
+                <viewController id="rTb-jE-lxL" customClass="ResultViewController" customModule="BMICalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RWM-j2-aOf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,6 +163,9 @@
                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculateButton:" destination="rTb-jE-lxL" eventType="touchUpInside" id="gxW-FY-Qv1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="twO-NG-DUs"/>
@@ -173,6 +178,10 @@
                             <constraint firstItem="7nt-Da-fnL" firstAttribute="leading" secondItem="twO-NG-DUs" secondAttribute="leading" constant="15" id="pDW-vA-VGr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="WDZ-qm-Uxm" id="M3w-mD-uXD"/>
+                        <outlet property="bmiValueLabel" destination="G2m-sP-1XF" id="5AX-XY-aGp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXg-fj-0gg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
